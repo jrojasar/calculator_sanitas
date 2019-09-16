@@ -27,4 +27,9 @@ public class CalculatorApi {
 		return calculatorService.addition(calculatorRequest);
 	}
 
+	@RequestMapping(value = "/substraction", method = RequestMethod.POST)
+	public CalculatorResponse postSubstraction(@RequestBody CalculatorRequest calculatorRequest)  {
+				
+		return calculatorService.substraction(calculatorRequest);
+	}
 }

@@ -14,11 +14,29 @@ public class CalculatorServiceImpl implements CalculatorService {
 
 		int total = 0;
 		for (String number : calculatorRequest.getNumbers()) {
-			total += Integer.valueOf(number);
+			if (total == 0) {
+				total = Integer.valueOf(number);
+			} else {
+				total += Integer.valueOf(number);
+			}
 		}
 		CalculatorResponse result = new CalculatorResponse(Integer.toString(total));
 		return result;
 
+	}
+
+	@Override
+	public CalculatorResponse substraction(CalculatorRequest calculatorRequest) {
+		int total = 0;
+		for (String number : calculatorRequest.getNumbers()) {
+			if (total == 0) {
+				total = Integer.valueOf(number);
+			} else {
+				total -= Integer.valueOf(number);
+			}
+		}
+		CalculatorResponse result = new CalculatorResponse(Integer.toString(total));
+		return result;
 	}
 
 }

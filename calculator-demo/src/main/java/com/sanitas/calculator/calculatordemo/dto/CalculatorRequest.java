@@ -1,12 +1,11 @@
 package com.sanitas.calculator.calculatordemo.dto;
 
-import java.io.Serializable;
+
 import java.util.List;
 
-public class CalculatorRequest implements Serializable {
+public class CalculatorRequest  {
 
-	private static final long serialVersionUID = 1L;
-	
+
 	List<String> numbers;
 
 	public List<String> getNumbers() {

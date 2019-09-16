@@ -4,6 +4,10 @@ public class CalculatorResponse {
 	String result;
 
 	
+	public CalculatorResponse() {
+		super();
+	}
+
 	public CalculatorResponse(String result) {
 		super();
 		this.result = result;
