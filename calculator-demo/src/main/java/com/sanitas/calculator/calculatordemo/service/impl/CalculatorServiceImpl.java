@@ -6,8 +6,13 @@ import com.sanitas.calculator.calculatordemo.dto.CalculatorRequest;
 import com.sanitas.calculator.calculatordemo.dto.CalculatorResponse;
 import com.sanitas.calculator.calculatordemo.service.CalculatorService;
 
+import io.corp.calculator.TracerImpl;
+
+
 @Service
 public class CalculatorServiceImpl implements CalculatorService {
+
+	private TracerImpl tracerImpl = new TracerImpl();
 
 	@Override
 	public CalculatorResponse addition(CalculatorRequest calculatorRequest) {
@@ -21,6 +26,9 @@ public class CalculatorServiceImpl implements CalculatorService {
 			}
 		}
 		CalculatorResponse result = new CalculatorResponse(Integer.toString(total));
+
+		tracerImpl.trace(result.getResult());
+
 		return result;
 
 	}
@@ -36,6 +44,10 @@ public class CalculatorServiceImpl implements CalculatorService {
 			}
 		}
 		CalculatorResponse result = new CalculatorResponse(Integer.toString(total));
+		
+		tracerImpl.trace(result.getResult());
+		
+	
 		return result;
 	}
 
