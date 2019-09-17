@@ -1,8 +1,3 @@
-# calculator_sanitas
-====================
-
-This is a technical test for sanitas
-
 GENERACIÓN DEL JAR
 ==================
 Para poder realizar la generación del jar a traves de Spring Tool Suite se seguirán los siguientes pasos:
